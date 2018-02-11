@@ -1,0 +1,42 @@
+
+
+  #header {
+    padding-top: 30px;
+  }
+
+  .column {
+    height: 75vh;
+  }
+
+  #information {
+    margin-top: 20px;
+  }
+
+  #information-block {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #sample {
+    font-size: 24px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    height: 100%;
+  }
+
+  #species-data {
+    padding-top: 20px;
+    font-size: 16px;
+  }
+
+  .input-fields {
+    margin-top: 20px;
+  }
+
+  #input a {
+    margin-top: 20px;
+    margin-left: 15px;
+  }
