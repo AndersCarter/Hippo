@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shakespeare's Monkeys</title>
+  <link rel="stylesheet" href="resources/bootstrap.css">
+
+<!-- Style for Testing -->
+  <style>
+  .wrapper {
+    height: 100vh;
+  }
+
+  #right {
+    background-color: red;
+  }
+
+  #left {
+    background-color: blue;
+  }
+
+  #subset {
+    text-align: center;
+    font-size: 15px;
+  }
+  </style>
+
+</head>
+<body>
+<h1>Shakespeare's Monkeys</h1>
+<!-- Add a way to input things later -->
+<!--
+<div class="inputs">
+  <input id="target-phrase" class="form-control" type="text" placeholder="Please input phrase to generate.">
+  <input type="text" class="form-control" id="population-size" placeholder="Please give a population size.">
+</div> -->
+<a href="#" id="run" class="btn btn-primary">Run</a>
+<a href="#" class="btn btn-danger" id="stop">Stop</a>
+<p id="test"></p>
+<br>
+<div class="container-fluid">
+  <div class="wrapper row">
+    <div id="left" class="col-md-6 order-md-1">
+      <div id="subset">
+        <h2>Population Subset</h2>
+        Lorem ipsum dolor sit amet. <br>
+        Lorem ipsum dolor sit amet. <br>
+        Lorem ipsum dolor sit amet. <br>
+      </div>
+    </div>
+    <div id="right"  class="col-md-6 order-md-0">
+      <h4>Best Fit: <span id="highest-fitness-info"></span></h4>
+      <h4>Generations: <span id="generation-info"></span></h4>
+      <h4>Population Size: <span id="population-size-info"></span></h4>
+      <h4>Mutation Rate: <span id="mutation-rate-info"></span></h4>
+    </div>
+  </div>
+</div>
+
+
+<!-- JavaScript -->
+<script src="resources/popper.js"></script>
+<script src="resources/jquery-3.2.1.js"></script>
+<script src="resources/bootstrap.js"></script>
+<script src="js/index-commands.js" ></script>
+<script src="js/genetic.js"></script>
+<script src="js/dna.js"></script>
+
+
+</body>
+</html>
