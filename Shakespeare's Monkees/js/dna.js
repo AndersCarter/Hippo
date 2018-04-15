@@ -1,9 +1,8 @@
 
 class DNA {
-
-   constructor(target) {
+   constructor(strand, target) {
     // String that represends the current species
-    this.strand = DNA.randomString(target.length);
+    this.strand = strand;
 
     // value from 0 to 1 that represents how close the strand is
     // to the target strand
@@ -20,16 +19,5 @@ class DNA {
     }
 
     return numOfCorrectChars / target.length;
-  }
-
-  // Produces a random string of the given length. The string will only contain
-  // characters found on a keyboard.
-  static randomString(length) {
-    var result = "";
-    for(var i = 0; i < length; i++) {
-      var newCharacter = String.fromCharCode(Math.floor(Math.random() * 87) + 40);
-      result += newCharacter;
-    }
-    return result;
   }
 }

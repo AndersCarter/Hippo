@@ -13,14 +13,6 @@
     height: 100vh;
   }
 
-  #right {
-    background-color: red;
-  }
-
-  #left {
-    background-color: blue;
-  }
-
   #subset {
     text-align: center;
     font-size: 15px;
@@ -31,39 +23,47 @@
 <body>
 <h1>Shakespeare's Monkeys</h1>
 <!-- Add a way to input things later -->
-<!--
-<div class="inputs">
-  <input id="target-phrase" class="form-control" type="text" placeholder="Please input phrase to generate.">
-  <input type="text" class="form-control" id="population-size" placeholder="Please give a population size.">
-</div> -->
-<a href="#" id="run" class="btn btn-primary">Run</a>
-<a href="#" class="btn btn-danger" id="stop">Stop</a>
+<div id="inputs">
+  Please give a phrase to generate.
+  <input id="target-phrase" class="form-control" type="text" value="To be or not to be">
+  <br>
+  Please give a population size.
+  <input type="text" class="form-control" id="population-size" value="500">
+  <br>
+  Please give a mutation rate between 0 and 1.
+  <input type="text" class="form-control" id="mutation-rate" value=".05">
+  <br>
+  <a id="run" href="#" class="btn btn-primary">Generate Target</a>
+</div>
 <p id="test"></p>
 <br>
-<div class="container-fluid">
+<div id="app" class="container-fluid">
   <div class="wrapper row">
     <div id="left" class="col-md-6 order-md-1">
       <div id="subset">
         <h2>Population Subset</h2>
-        Lorem ipsum dolor sit amet. <br>
-        Lorem ipsum dolor sit amet. <br>
-        Lorem ipsum dolor sit amet. <br>
+        <div id="subset"></div>
       </div>
     </div>
     <div id="right"  class="col-md-6 order-md-0">
+      <h4>Target Phrase: <span id="target-phrase-info"></span></h4>
       <h4>Best Fit: <span id="highest-fitness-info"></span></h4>
       <h4>Generations: <span id="generation-info"></span></h4>
       <h4>Population Size: <span id="population-size-info"></span></h4>
       <h4>Mutation Rate: <span id="mutation-rate-info"></span></h4>
+      <a href="#" class="btn btn-danger" id="reset">Reset</a>
     </div>
   </div>
 </div>
+
+
 
 
 <!-- JavaScript -->
 <script src="resources/popper.js"></script>
 <script src="resources/jquery-3.2.1.js"></script>
 <script src="resources/bootstrap.js"></script>
+<script src="js/helper.js"></script>
 <script src="js/index-commands.js" ></script>
 <script src="js/genetic.js"></script>
 <script src="js/dna.js"></script>
